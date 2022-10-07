@@ -422,9 +422,28 @@
 
 #es-magneB6-ZIS-1.es-magneB6-ZIS-1 .es-ash__benefitsSingle p {
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
 }
-
+#es-magneB6-ZIS-1.es-magneB6-ZIS-1 .es-ash__benefitsSingle--3 {
+  position: relative;
+}
+#es-magneB6-ZIS-1.es-magneB6-ZIS-1 .es-ash__benefitsSingle--3::before {
+  content: '';
+  position: absolute;
+  top: -135px;
+  right: 62%;
+  background-color: #fff;
+  width: 3px;
+  height: 170px;
+}
+#es-magneB6-ZIS-1.es-magneB6-ZIS-1 .es-ash__toggledClaim {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
 #es-magneB6-ZIS-1.es-magneB6-ZIS-1 .es-ash__claim {
   width: 70%;
   text-align: center;
@@ -432,6 +451,7 @@
   padding: 10px;
   margin: 0 auto;
 }
+
 #es-magneB6-ZIS-1.es-magneB6-ZIS-1 .es-ash__claimImg {
   width: 100%;
   display: flex;
@@ -450,11 +470,10 @@
   display: none;
 }
 #es-magneB6-ZIS-1.es-magneB6-ZIS-1 .es-ash__active {
-  display: flex;
+  display: block;
   animation: es-showContent 2s alternate;
   position: absolute;
   z-index: 10;
-  background-color: #00b1b8;
 }
 #es-magneB6-ZIS-1.es-magneB6-ZIS-1 .es-ash__remove {
   display: none;
