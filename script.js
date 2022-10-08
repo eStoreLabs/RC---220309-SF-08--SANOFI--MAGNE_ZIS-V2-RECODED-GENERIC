@@ -1,41 +1,37 @@
-const esKvIcon = document.querySelector('.es-kv__descIcon')
-const esKvText = document.querySelector('.es-kv__descSingle')
+const esKvIconAsh = document.querySelector('.es-kv__descIcon--leaf');
+const esKvTextAsh = document.querySelector('.es-kv__descSingle--ash');
 
+const esToggleBtn = document.querySelectorAll('.es-ash__iconSingle');
+const esCtnBox = document.querySelectorAll('.es-ash__benefitsSingle');
 
-  esKvIcon.addEventListener('click', ()=>{
-    esKvText.classList.toggle('.es-kv__descSingleActive');
+const esToggleArrow = document.querySelector('.es-ash__claimImg');
+const esText = document.querySelector('.es-ash__claim--toggle');
+
+const esDozeBtn = document.querySelector('.es-doze__containerBtn');
+const esDozeCtn = document.querySelector('.es-doze__container');
+// for (let i = 0; i < esKvIcon.length; i++) {
+//   esKvIcon[i].addEventListener('click', () => {
+//     esKvText[i].classList.toggle('.es-kv__descSingleActive');
+//   });
+// }
+
+esKvIconAsh.addEventListener('click', () => {
+  esKvTextAsh.classList.toggle('es-kv__descSingleActive');
 });
 
-
-
-const esToggleBtn = document.querySelectorAll('.es-ash__iconSingle')
-const esCtnBox = document.querySelectorAll('.es-ash__benefitsSingle')
-const esMainCtn = document.querySelector('.es-ash__benefitsMainCtn')
-
-for (let i = 0; i < esToggleBtn.length; i++){
-  esToggleBtn[i].addEventListener('click', ()=>{
-  // esMainCTn[i].classList.toggle('es-ash__active');
-  esMainCtn.appendChild(esCtnBox[i]);
-  esCtnBox[i].classList.toggle('es-ash__active');
-  console.log(esCtnBox[i])
-});
+for (let i = 0; i < esToggleBtn.length; i++) {
+  esToggleBtn[i].addEventListener('click', () => {
+    esCtnBox[i].classList.toggle('es-ash__active');
+  });
 }
 
-
-const esToggleArrow = document.querySelector('.es-ash__claimImg')
-const esText= document.querySelector('.es-ash__claim--toggle')
-
-esToggleArrow.addEventListener('click', ()=>{
+esToggleArrow.addEventListener('click', () => {
   esText.classList.toggle('es-ash__active');
   esToggleArrow.classList.toggle('es-ash__remove');
 });
+//
 
-
-const esDozeBtn = document.querySelector('.es-doze__containerBtn')
-const esDozeCtn = document.querySelector('.es-doze__container')
-
-esDozeBtn.addEventListener('click', ()=>{
-  esDozeCtn.classList.add('.es-showIngr');
-  // esDozeBtn.classList.add('.es-removeIngr');
-  console.log('ing-clicked')
+esDozeBtn.addEventListener('click', () => {
+  esDozeCtn.classList.toggle('.es-showIngr');
+  // esDozeBtn.classList.toggle('.es-removeIngr');
 });
